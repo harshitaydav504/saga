@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Search Results</title>
+    <link rel="stylesheet" href="result.css">
+    <!-- Add this to result.html where you want the link to appear -->
+<a href="profile.html" class="view-profile-link">Go to Profile</a>
+
+</head>
+<body>
+    <div class="results-container"></div>
+
+    <script>
+        function fetchBooks(query) {
+            // Dummy data for demonstration
+            return [
+                {
+                    id: '1',
+                    title: "Book Title 1",
+                    author: "Author 1",
+                    genre: "Genre 1",
+                    coverImage: "path_to_cover_image_1"
+                },
+                {
+                    id: '2',
+                    title: "Book Title 2",
+                    author: "Author 2",
+                    genre: "Genre 2",
+                    coverImage: "path_to_cover_image_2"
+                }
+            ];
+        }
+
+        function addToProfile(bookId, status) {
+            let profile = JSON.parse(localStorage.getItem('profile')) || {
+                'Already Read': [],
+                'To Be Read': [],
+                'Currently Reading': []
+            };
+
+            let books = JSON.parse(localStorage.getItem('searchResults')) || [];
+            let book = books.find(b => b.id === bookId);
+
+            if (book) {
+                profile[status].push(book);
+                localStorage.setItem('profile', JSON.stringify(profile));
+                alert(`Book added to ${status}`);
+            }
+        }
+
+        document.addEventListener('DOMContentLoaded', () => {
+            const params = new URLSearchParams(window.location.search);
+            const query = params.get('query');
+
+            if (query) {
+                const books = fetchBooks(query);
+                localStorage.setItem('searchResults', JSON.stringify(books));
+
+                const resultsContainer = document.querySelector('.results-container');
+                resultsContainer.innerHTML = books.map(book => `
+                    <div class="result-item">
+                        <img src="${book.coverImage}" alt="Book Cover" class="book-cover">
+                        <div class="book-info">
+                            <h2>${book.title}</h2>
+                            <p>Author: ${book.author}</p>
+                            <p>Genre: ${book.genre}</p>
+                            <button class="already-read" onclick="addToProfile('${book.id}', 'Already Read')">Add to Already Read</button>
+                            <button class="to-be-read" onclick="addToProfile('${book.id}', 'To Be Read')">Add to To Be Read</button>
+                            <button class="currently-reading" onclick="addToProfile('${book.id}', 'Currently Reading')">Add to Currently Reading</button>
+                        </div>
+                    </div>
+                `).join('');
+            }
+        });
+    </script>
+</body>
+</html>

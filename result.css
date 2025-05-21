@@ -1,0 +1,102 @@
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.results-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 20px;
+}
+
+.result-item {
+    background-color: #FEDEEA; /* Updated book color */
+    border: 1px solid #e2e2e2;
+    border-radius: 8px;
+    overflow: hidden;
+    width: 100%;
+    max-width: 250px; /* Reduced size */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.book-cover {
+    width: 100%;
+    height: auto;
+}
+
+.book-info {
+    padding: 10px;
+}
+
+.book-info h2 {
+    font-size: 18px;
+    margin: 0;
+}
+
+.book-info p {
+    margin: 5px 0;
+}
+
+button {
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    padding: 10px;
+    cursor: pointer;
+    font-size: 14px;
+    margin: 5px 0;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.to-be-read {
+    background-color: #E6498A; /* To Be Read */
+}
+
+.currently-reading {
+    background-color: #F9A93C; /* Currently Reading */
+}
+
+.already-read {
+    background-color: #65BBAE; /* Already Read */
+}
+
+button:hover {
+    opacity: 0.8; /* Slightly fade on hover */
+}
+/* Styles for buttons */
+.add-button {
+    padding: 10px;
+    border: none;
+    color: #fff;
+    cursor: pointer;
+    margin: 5px;
+}
+
+.already-read-button {
+    background-color: #65BBAE;
+}
+
+.to-be-read-button {
+    background-color: #E6498A;
+}
+
+.currently-reading-button {
+    background-color: #F9A93C;
+}
+
+/* Styles for book color classes */
+.color1 {
+    background-color: #E6498A; /* Color for 'To Be Read' */
+}
+
+.color2 {
+    background-color: #F9A93C; /* Color for 'Currently Reading' */
+}
+
+.color3 {
+    background-color: #65BBAE; /* Color for 'Already Read' */
+}

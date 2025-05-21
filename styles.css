@@ -1,0 +1,328 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #F4F2ED;
+    cursor: default;
+    overflow-x: hidden;
+}
+
+.navbar {
+    height: 65px;
+    width: 100vw;
+    background-color: #DB784C;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 80px;
+    box-sizing: border-box;
+}
+
+.logo {
+    color: #003854;
+    font-family: 'Marcellus', serif;
+    font-size: 48px;
+    margin-top: 5px;
+    margin-left: 15px;
+}
+
+.search-container {
+    position: relative;
+    display: flex;
+    align-items: center;
+    margin-top: 2px;
+    margin-left: auto;
+    margin-right: 34px;
+}
+
+.search-bar {
+    width: 300px;
+    height: 40px;
+    border-radius: 53px;
+    padding-left: 28px;
+    font-family: 'Mulish', sans-serif;
+    font-weight: 300;
+    font-size: 15px;
+}
+
+.search-icon {
+    position: absolute;
+    right: 15px;
+    width: 37px;
+    height: 36px;
+    cursor: pointer;
+}
+
+.profile-picture {
+    width: 55px;
+    height: 50px;
+    border-radius: 50%;
+    margin-top: 3px;
+}
+
+.results-section {
+    padding: 20px;
+    text-align: center;
+    background-color: #F4F2ED;
+}
+
+.results-section #results {
+    margin-top: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.results-section .result-item {
+    background-color: white;
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    width: calc(25% - 20px); /* Reduced width */
+    box-sizing: border-box;
+}
+
+.results-section .result-item img {
+    width: 100%;
+    height: auto;
+}
+
+.results-section .result-item h3 {
+    font-family: 'Marcellus', serif;
+    font-size: 20px;
+    color: #003854;
+    margin-top: 10px;
+}
+
+.results-section .result-item p {
+    font-family: 'Mulish', sans-serif;
+    font-weight: 300;
+    color: black;
+    font-size: 14px;
+}
+
+.landing-page {
+    display: flex;
+    align-items: flex-start;
+    padding: 0 80px;
+    margin-top: 5px;
+    position: relative;
+    flex-wrap: wrap;
+}
+
+.home-page-image {
+    width: 100%;
+    max-width: 571px;
+    height: auto;
+    margin-top: -30px;
+    position: relative;
+    z-index: 2;
+    margin-bottom: -60px;
+}
+
+.welcome-text {
+    color: #2EA8B7;
+    font-family: 'Marcellus', serif;
+    text-align: center;
+    position: absolute;
+    top: 10%;
+    left: 60%;
+    transform: translateX(-50%);
+    z-index: 1;
+    width: 100%;
+    font-size: 40px;
+}
+
+.description-text {
+    color: black;
+    font-family: 'Mulish', sans-serif;
+    margin-top: 20px;
+    text-align: center;
+    line-height: 1.5;
+    font-size: 30px;
+    max-width: 600px;
+    position: absolute;
+    top: 45%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.reading-cat-image {
+    width: 100%;
+    max-width: 459px;
+    height: auto;
+    position: absolute;
+    right: 80px;
+    bottom: -50px;
+    z-index: 2;
+}
+
+.scribe {
+    font-weight: bold;
+    color: #E53E83;
+}
+
+.features-section {
+    background-color: #EAAFC4;
+    padding: 0px 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    box-sizing: border-box;
+    position: relative;
+    z-index: 1;
+}
+
+.features-section .feature {
+    text-align: center;
+    position: relative;
+    width: 100%;
+    max-width: 300px;
+    margin: 0px;
+}
+
+.features-section .feature img {
+    width: 100%;
+    height: auto;
+}
+
+.features-section h2 {
+    font-family: 'Marcellus', serif;
+    font-size: 50px;
+    margin: 30px;
+    color: #003854;
+}
+
+.feature-discover {
+    order: 1;
+}
+
+.feature-track {
+    order: 2;
+}
+
+.feature-nest {
+    order: 3;
+}
+
+footer {
+    background-color: #ADCCC4;
+    color: #003854;
+    padding: 50px;
+    padding-left: 150px;
+    text-align: center;
+    font-size: 14px;
+    display: flex;
+    justify-content: space-between;
+    align-items: left;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    text-align: left;
+    font-family: 'Mulish', sans-serif;
+}
+
+.saga-section,
+.contact-section {
+    width: 45%;
+}
+
+.footer-content h3 {
+    color: #003854;
+    font-family: 'Marcellus', serif;
+    font-size: 30px;
+    margin-bottom: 10px;
+}
+
+.footer-content a {
+    color: #003854;
+    font-family: 'Mulish', sans-serif;
+    font-weight: 300;
+    font-size: 15px;
+    text-decoration: none;
+}
+
+.social-icons {
+    margin-top: 10px;
+}
+
+.social-icons img {
+    width: 24px;
+    height: 24px;
+    margin-right: 10px;
+}
+
+/* Search Results Buttons */
+.result-item .book-controls button {
+    border: none;
+    color: white;
+    border-radius: 4px;
+    padding: 10px 15px;
+    cursor: pointer;
+    font-size: 14px;
+    margin: 5px 0;
+}
+
+.result-item .book-controls .to-be-read {
+    background-color: #E6498A; /* To Be Read */
+}
+
+.result-item .book-controls .currently-reading {
+    background-color: #F9A93C; /* Currently Reading */
+}
+
+.result-item .book-controls .already-read {
+    background-color: #65BBAE; /* Already Read */
+}
+/* Styles for buttons */
+.add-button {
+    padding: 10px;
+    border: none;
+    color: #fff;
+    cursor: pointer;
+    margin: 5px;
+}
+
+.already-read-button {
+    background-color: #65BBAE;
+    font-family: 'Marcellus', serif;
+    border-radius: 7px;
+}
+
+.to-be-read-button {
+    background-color: #E6498A;
+    font-family: 'Marcellus', serif;
+    border-radius: 7px;
+}
+
+.currently-reading-button {
+    background-color: #F9A93C;
+    font-family: 'Marcellus', serif;
+    border-radius: 7px;
+}
+
+/* Styles for book color classes */
+.color1 {
+    background-color: #E6498A; /* Color for 'To Be Read' */
+    font-family: 'Marcellus', serif
+
+}
+
+.color2 {
+    background-color: #F9A93C; /* Color for 'Currently Reading' */
+    font-family: 'Marcellus', serif
+}
+
+.color3 {
+    background-color: #65BBAE; /* Color for 'Already Read' */
+    font-family: 'Marcellus', serif
+}
+/* Existing styles */
+
+.result-item{
+    background-color: #FEDEEA;
+}

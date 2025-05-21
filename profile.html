@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile Page</title>
+    <link rel="stylesheet" href="profile.css">
+    <link href="https://fonts.googleapis.com/css2?family=Marcellus&family=Mulish:wght@300&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="navbar">
+        <div class="logo">
+            <a href="index.html" style="color: #003854; text-decoration: none;">SAGA</a>
+        </div>
+        <div class="search-container">
+            <input type="text" id="search-bar" class="search-bar" placeholder="Search Scribe ">
+            <img src="images/search_icon.png" alt="Search Icon" id="search-icon" class="search-icon">
+        </div>
+        <a href="profile.html">
+            <img src="images/profile.png" alt="Profile Picture" class="profile-picture">
+        </a>
+    </div>
+
+    <div class="profile-page">
+        <div class="profile-header">
+            <div class="profile-info">
+                <img src="images/profile.png" alt="Profile Picture" class="profile-picture-large">
+                <div class="profile-details">
+                    <h1>Harshita Yadav</h1>
+                    <p class="bio">📚 Bookworm | ✍️ Poet | 📺 Netflix Binger Living through stories, words, and screen time.</p>
+                </div>
+                <div class="bio-image">
+                    <img src="images/profile_cat.png" alt="Profile Cat" class="sleeping-cat-image">
+                </div>
+            </div>
+        </div>
+
+        <div class="bookshelf">
+            <div class="shelf to-be-read">
+                <h2>To Be Read</h2>
+                <div class="book-list" id="to-be-read-list"></div>
+            </div>
+
+            <div class="shelf currently-reading">
+                <h2>Currently Reading</h2>
+                <div class="book-list" id="currently-reading-list"></div>
+            </div>
+
+            <div class="shelf already-read">
+                <h2>Already Read</h2>
+                <div class="book-list" id="already-read-list"></div>
+            </div>
+        </div>
+    </div>
+    <footer>
+        <div class="footer-content">
+            <div class="saga-section">
+                <h3>About SAGA</h3>
+                <p>SAGA is your digital bookshelf platform where you can discover, get reviews, and organize your favorite books.</p>
+            </div>
+            <div class="contact-section">
+                <h3>Contact Us</h3>
+                <p>Email: <a href="mailto:2023kuec2047@iiitkota.ac.in">2023kuec2047@iiitkota.ac.in</a></p>
+                <div class="social-icons">
+                    <a href="https://www.instagram.com/ydvv.harshita" target="_blank"><img src="images/instagram_icon.png" alt="Instagram"></a>
+                    <a href="https://www.linkedin.com/in/harshita-yadav-6b287b296/" target="_blank"><img src="images/linkedin_icon.png" alt="LinkedIn"></a>
+                    <a href="https://twitter.com/harshitayadavv" target="_blank"><img src="images/twitter_icon.png" alt="Twitter"></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
